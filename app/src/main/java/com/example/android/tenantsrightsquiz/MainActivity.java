@@ -16,6 +16,21 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
     //starting score is zero
     int score = 0;
+    int radioScore;
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.radio_departmentalenforcementSDCI:
+                if (checked) {
+                    radioScore = 1;
+                }
+                break;
+        }
+    }
     /**
      * This method is called when the submit button is clicked.
      */
@@ -33,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         if (Objects.equals(oheTranslate, getString(R.string.answer4))){
             score += 1;
         }
-
+        score = score + radioScore;
         Toast.makeText(this, "Your score is " + score, Toast.LENGTH_SHORT).show();
         return String.valueOf(score);
     }
@@ -43,12 +58,10 @@ public class MainActivity extends AppCompatActivity {
         CheckBox checkBoxFederal =  findViewById(R.id.checkbox_Federal);
         CheckBox checkBoxCounty =  findViewById(R.id.checkbox_County);
         CheckBox checkBoxCity =  findViewById(R.id.checkbox_City);
-
         boolean stateProtections = checkBoxState.isChecked();
         boolean federalProtections = checkBoxFederal.isChecked();
         boolean cityProtections = checkBoxCity.isChecked();
         boolean countyProtections = checkBoxCounty.isChecked();
-
         if (cityProtections == true){
             score += 1;
         }
@@ -62,19 +75,6 @@ public class MainActivity extends AppCompatActivity {
             score = 0;
         }
         return score;
-    }
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.radio_departmentalenforcementSDCI:
-                if (checked)
-                    score += 1;
-                break;
-
-        }
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
