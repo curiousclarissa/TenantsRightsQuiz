@@ -37,15 +37,13 @@ public class MainActivity extends AppCompatActivity {
     public String submit(View view) {
         checkedScore();
         EditText sdciField = findViewById(R.id.q3SDCI);
-        sdciField.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
         String sdciTranslate = sdciField.getText().toString();
         EditText oheField = findViewById(R.id.q4OHE);
-        oheField.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
         String oheTranslate = oheField.getText().toString();
-        if (Objects.equals(sdciTranslate, getString(R.string.answer3))){
+        if (sdciTranslate.equalsIgnoreCase(getString(R.string.answer3))){
             score += 1;
         }
-        if (Objects.equals(oheTranslate, getString(R.string.answer4))){
+        if (oheTranslate.equalsIgnoreCase(getString(R.string.answer4))){
             score += 1;
         }
         score = score + radioScore;
