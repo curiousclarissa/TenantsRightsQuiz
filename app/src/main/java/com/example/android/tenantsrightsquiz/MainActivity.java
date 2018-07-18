@@ -60,17 +60,11 @@ public class MainActivity extends AppCompatActivity {
         boolean federalProtections = checkBoxFederal.isChecked();
         boolean cityProtections = checkBoxCity.isChecked();
         boolean countyProtections = checkBoxCounty.isChecked();
-        if (cityProtections == true){
-            score += 1;
-        }
-        if (federalProtections == true){
-            score += 1;
-        }
-        if (stateProtections == true){
+        if (cityProtections == true && federalProtections == true && stateProtections == true){
             score += 1;
         }
         else if (countyProtections == true){
-            score = 0;
+            score += 0;
         }
         return score;
     }
