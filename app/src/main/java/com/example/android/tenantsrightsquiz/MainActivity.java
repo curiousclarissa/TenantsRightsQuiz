@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     //starting score is zero
     int score = 0;
     int radioScore;
-
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();

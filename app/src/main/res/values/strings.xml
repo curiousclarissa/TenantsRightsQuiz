@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TenantsRightsQuiz</string>
+    <string name="question1"> Which levels of government have laws to protect your rights as a tenant?</string>
+    <string name="description1">These answers apply to residents within Seattle City Limits.</string>
+    <string name="question2">Which city department enforces most local landlord-tenant laws?</string>
+    <string name="SDCI">SDCI</string>
+    <string name="DPD">DPD</string>
+    <string name="OHE">OHE</string>
+    <string name="SPD">SPD</string>
+    <string name="State">State</string>
+    <string name="Federal">Federal</string>
+    <string name="City">City</string>
+    <string name="County">County</string>
+    <string name="question3">What is the acronym for Seattle Department of Code and Inspections?</string>
+    <string name="answer3">SDCI</string>
+    <string name="question4">What does OHE stand for?</string>
+    <string name="answer4">OFFICE OF HEARING EXAMINER</string>
+    <string name="submit">Click Here to Submit</string>
+</resources>
