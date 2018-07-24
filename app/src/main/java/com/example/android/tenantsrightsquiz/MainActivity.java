@@ -18,6 +18,10 @@ public class MainActivity extends AppCompatActivity {
     int score = 0;
     int radioScore;
 
+    /**
+     * this radio button sets the score to 1 if the user correctly identifies SDCI as the answer.
+     * @param view
+     */
     public void onRadioButtonClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -33,7 +37,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method is called when the submit button is clicked.
+     * This method is called when the submit button is clicked and reports score to the user as a toast.
+     * This submit also tabulates the string comparison and adds 1 point to the users score for the text entries being correct.
+     * Correct entry for question three is SDCI
+     * Correct entry for question 4 is Office of Hearing Examiner, not case sensitive.
      */
     public String submit(View view) {
         checkedScore();
@@ -53,7 +60,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private int checkedScore() {
-        //handle user checked boxes
+        /**
+         * handle user checked boxes
+         * One point is granted if the user correctly identifies all three parts of the correct answer.
+         * No points are added if the user does not meet this requirement
+         * No points are deducted for incorrect answers.
+         */
         CheckBox checkBoxState = findViewById(R.id.checkbox_State);
         CheckBox checkBoxFederal = findViewById(R.id.checkbox_Federal);
         CheckBox checkBoxCounty = findViewById(R.id.checkbox_County);

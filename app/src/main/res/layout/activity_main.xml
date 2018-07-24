@@ -104,7 +104,14 @@
                 android:orientation="vertical"
                 android:text="@string/SPD" />
         </RadioGroup>
-
+        <TextView
+        android:id="@+id/q3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description1"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp"
+        android:text="@string/question3"/>
         <EditText
             android:id="@+id/q3SDCI"
             android:layout_width="match_parent"
@@ -112,7 +119,14 @@
             android:hint="@string/question3"
             android:inputType="text"
             android:textSize="16sp" />
-
+        <TextView
+            android:id="@+id/q3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description1"
+            android:layout_centerHorizontal="true"
+            android:padding="8dp"
+            android:text="@string/question4"/>
         <EditText
             android:id="@+id/q4OHE"
             android:layout_width="match_parent"
@@ -120,7 +134,6 @@
             android:hint="@string/question4"
             android:inputType="text"
             android:textSize="16sp" />
-
         <Button
             android:id="@+id/submit_button"
             android:layout_width="wrap_content"
